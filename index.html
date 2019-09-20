@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/todo.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="row mt-4">
+            <div class="task-list col-lg-3" id="pending">
+                <h3 class="text-center h3 border-bottom border-mute pb-2">pending task</h3>
+                <div class="todo-task">
+                    <div class="task-header">Task 1</div>
+                    <div class="task-date"><small>20/09/19</small></div>
+                    <div class="task-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Ratione fuga magni sapiente ipsa. Harum deleniti ipsam voluptas dolor tenetur excepturi,
+                        reiciendis eius dicta, quae molestias iure totam fugit inventore corrupti.</div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="task-list col-lg-3" id="inProgress">
+                <h3 class="text-center h3 border-bottom border-mute pb-2">In progress</h3>
+            </div>
+            <!--  -->
+            <div class="task-list col-lg-3" id="completed">
+                <h3 class="text-center h3 border-bottom border-mute pb-2">completed</h3>
+            </div>
+            <!--  -->
+            <div class="task-list col-lg-3">
+                <h3 class="text-center h3 border-bottom border-mute pb-2">Add a task</h3>
+                <form id="todo-form">
+                    <div class="form-group">
+                        <input type="text" class=" form-control" placeholder="Enter task title...">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="description" rows="3" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Due date(dd/mm/yy)...">
+                    </div>
+                    <input type="button" value="Add Task" class="btn btn-primary">
+                    <input type="button" value="Clear Field..." class="btn btn-warning">
+                </form>
+                <div id="delete-task" class="mt-5 p-5 border border-danger"> Drag here to delete</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
